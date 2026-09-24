@@ -30,3 +30,28 @@ my-personal-website/
 ├── index.html
 ├── style.css
 └── background.png.png
+
+I'm building small projects separately, understanding each component, and connecting them later.
+Future experiments include:
+- Digital Clock
+- Timer
+- Pomodoro
+- Notes
+- Drawing Board
+- Mascot / Animations
+- Small Games
+These projects will help me work toward larger ideas, including my long-term project Studyverse.
+I don't want to build everything at once. I want to understand the smaller pieces first and use them to build bigger things later.
+
+🛠️ Built With
+- HTML
+- CSS
+- Git
+- GitHub
+- VS Code
+- Hackatatime
+
+This project will continue changing as I learn. Expect experiments, redesigns, bugs, unfinished ideas, and improvements.
+👤 Author
+Ashaz
+GitHub: @TheTurboVerse
