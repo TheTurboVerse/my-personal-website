@@ -7,6 +7,6 @@ h1{font-weight: bold; font-size: 100px}
 h2{color:rgb(229, 231, 226);font-family: monospace;font-weight: bold;font-size: 50px}
 h3{color:rgb(255, 253, 253);font-family: monospace;font-weight: bold;font-size: 35px}
 .maincontainer{display:flex;flex-direction :row ;gap: 20px}
-.dev-info{display:flex:inline-block;flex-direction:column;}
+.dev-info{display:flexinline-block;flex-direction:column;}
 h2>My Spotify PLaylist{color:silver}
 p{color:white}
