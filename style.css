@@ -37,12 +37,12 @@ padding: 20px;
     display:inline-block;
     padding: 8px 18px;
     margin: 4px;
-    background-color: blueviolet;
+    background-color:#9b30ff;
     color: #f1f0f0;
     text-decoration: none;
     border-radius: 15px;
     font-weight: bold;
-    transition: background-color 0.2s, transform 0.2s;
+    transition: background-color 0.29s, transform 0.29s;
 }
 section { 
     background-color: rgba(20, 10, 40, 0.88);
@@ -91,7 +91,7 @@ section p{
 }
 .social-links a { color: #f8f9ff;
     text-decoration: none;
-    transition: color 0.2s, transform 0.2s;
+    transition: color 0.29s, transform 0.29s;
 }
 .social-links a:hover {
     color: #ffffff;
