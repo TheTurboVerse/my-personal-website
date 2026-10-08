@@ -3,7 +3,7 @@
     padding: 0; 
     box-sizing: border-box;}
 
-body{font-family:Verdana, Geneva, Tahoma, sans-serif;
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:#ffffff;
 line-height: 1.6;
 min-height: 100vh;
@@ -14,29 +14,25 @@ background-position:center;
 background-repeat:no-repeat;
 background-attachment: fixed;
 }
-header {
-    background-color: rgba(6, 4, 10, 0.288);
-    padding: 16px 20px;
-    text-align: center;
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.site-header {
+    padding: 24px 20px;
+    text-align:center;
+    background-color:rgba(6, 4, 10, 0.55);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #8b64b3;
 }
 .logo {
     display:flex;
     align-items:center;
     justify-content:center;
     gap: 16px;
-    margin-bottom: 16px;
 }
 .logo h1 {
     color:#f1f0f0;
     font-size: 42px;
-    margin: 0;
     letter-spacing: 1px;
-    line-height: 1.5;
-    font-weight:bolder;
+    line-height: 1.2;
+    font-weight: 800;
 }
 .icon {
     width: 72px;
@@ -46,26 +42,44 @@ header {
     display:block;
     flex-shrink: 0;
 }
+.floating-nav {
+    position:sticky;
+    top:12px;
+    z-index: 100;
+    width:fit-content;
+    max-width: calc(100% - 32px);
+    margin: 16px auto;
+    padding: 8px;
+    background-color:rgba(6, 4, 10, 0.70);
+    backdrop-filter: blur(12px);
+    border: 1px solid #8f64b3;
+    border-radius: 18px;
+}
+.nav-inner {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap: 8px;
+}
 .nav-btn {
     display:inline-block;
-    padding: 8px 18px;
-    margin: 4px;
-    background-color:#8f64b32c;
-    width: auto;
+    padding: 8px 16px;
     color: #f1f0f0;
     text-decoration: none;
-    border-radius: 15px;
-    font-weight: bold;
-    transition: background-color 0.29s, transform 0.29s;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.2s;
 }
 .nav-btn:hover { background-color: #8f64b32c; 
-    transform: scale(1.15);}
+    transform: translateY(-2px);
+}
+
 .intro {
     width: 100%;
     min-height: 88vh;
     display:flex;
     flex-direction:column;
-    justify-content:center;
 }
 #intro h2 {
     font-size: 36px;
@@ -91,6 +105,7 @@ section {
     border-radius: 18px;
     border: 2px solid #8f64b3;
     min-height: 120px;
+    scroll-margin-top: 110px;
 }
 section h2 {
     color: #ffa600;
@@ -103,7 +118,7 @@ section p{
     font-size: 20px;
     margin-bottom: 12px;
     line-height: 1.7;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .learning ul {
@@ -119,10 +134,10 @@ section p{
     border-radius: 8px;
     border-left:solid #ffa600 4px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .learning h3{
-color: #8f64b3;
+    color:#8f64b3;
 font-size: 18px;
 margin: 18px 0 10px;
 }
@@ -135,11 +150,11 @@ margin: 18px 0 10px;
 }
 .social-links a { color: #ffffff;
     text-decoration: none;
-    transition: color 0.29s, transform 0.29s;
+    transition: color 0.2s, transform 0.2s;
 }
 .social-links a:hover {
     color: rgba(0, 0, 0, 0.603);
-    transform: scale(1.15);
+    transform: translateY(-2px);
 }
 .social-links svg{
     fill: currentColor;
@@ -153,4 +168,13 @@ footer {
     font-size: 18px;
     background-color: #8f64b32c;
     width: 100%;
+}
+@media (max-width: 600px) {
+    .logo h1 { font-size: 28px;
+    }
+    .icon { 
+        width: 48px;
+        height:48px;
+    }
+    section { padding: 24px 20px;}
 }
