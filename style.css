@@ -207,6 +207,21 @@ footer {
     background-color: #8f64b32c;
     width: 100%;
 }
+.back-to-top {
+    position:fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#8f64b3;
+    color:ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 90;
+}
 @media (max-width: 600px) {
     .logo h1 { font-size: 28px;
     }
