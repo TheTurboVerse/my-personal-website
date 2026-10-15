@@ -1,13 +1,27 @@
+:root {
+    --color-bg: #170b2e;
+    --color-purple: #8f64b3;
+    --color-purple-hover: #a978d0;
+    --color-gold: #ffa600;
+    --color-text: #f1f0f0;
+    --color-muted: #dddddd;
+    --color-glass: #24133b;
+    --color-glass-dark:#1d102f;
+    --color-panel: #24133b;
+    --color-list-item: #392052;
+--color-border: #8f64b3;
+    --color-shadow:rgba(0,0,0,0.35);
+}
 *{
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;}
 
 body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#ffffff;
+    color: var(--color-text);
 line-height: 1.6;
 min-height: 100vh;
-background-color: #1a1a2e;
+background-color: var(--color-bg);
 background-image: url("background.png");
 background-size: cover;
 background-position:center;
@@ -17,9 +31,9 @@ background-attachment: fixed;
 .site-header {
     padding: 24px 20px;
     text-align:center;
-    background-color:rgba(6, 4, 10, 0.55);
+    background-color: var(--color-glass-dark);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #8b64b3;
+    border-bottom:1px solid var(--color-purple);
 }
 .logo {
     display:flex;
@@ -28,7 +42,7 @@ background-attachment: fixed;
     gap: 16px;
 }
 .logo h1 {
-    color:#f1f0f0;
+    color: var(--color-text);
     font-size: 42px;
     letter-spacing: 1px;
     line-height: 1.2;
@@ -64,18 +78,21 @@ background-attachment: fixed;
     align-items: center;
     justify-content:center;
     gap: 5px;
-    background-color: rgba(20,8,38,0.85);
+    background-color: var(--color-glass-dark);
     backdrop-filter: blur(12px);
-    border: #8f64b3 1px solid;
+    border: var(--color-border) 1px solid;
     border-radius: 14px;
     cursor: pointer;
-    box-shadow: 0 6px 18px black;
+    box-shadow: 0 6px 18px var(--color-shadow);
+}
+.menu-toggle:hover {
+    background-color: var(--color-purple);
 }
 .menu-toggle span {
     display: block;
     width: 23px;
     height: 2px;
-    background-color: #ffffff;
+    background-color: var(--color-text);
     border-radius: 2px;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -87,11 +104,11 @@ background-attachment: fixed;
     z-index: 1000;
     width: min(220px,calc(100vw - 40px));
     padding: 10px;
-    background-color: rgba(20,8,38,0.85);
+    background-color: var(--color-glass);
     backdrop-filter: blur(12px);
-    border: #8f64b3 1px solid;
+    border: var(--color-purple) 1px solid;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 24px var(--color-shadow);
 }
 .menu-check:checked ~ .menu-panel {
     display: block;
@@ -100,18 +117,18 @@ background-attachment: fixed;
 .menu-link {
     display:block;
     padding: 12px 14px;
-    color:#ffffff;
+    color:var(--color-text);
     text-decoration:none;
     font-weight:700;
     border-radius:10px;
 }
 .menu-link:hover,.menu-link:focus-visible {
-    background-color:#8f64b3;
+    background-color: var(--color-purple);
     outline:none;
 
 }
-.menu-check:focus-visible {
-    outline:#ffa600 solid 2px;
+.menu-check:focus-visible + .menu-toggle {
+    outline:var(--color-gold) solid 2px;
     outline-offset: 3px;
 }
 .menu-check:checked + .menu-toggle span:first-child {
@@ -129,13 +146,13 @@ background-attachment: fixed;
     align-items: center;
     justify-content:center;
     text-align:center;
-    background-color: rgba(8,4,18,0.30);
+    background-color: rgba(23,11,46,0.30);
 }
 .hero-content {
     max-width: 700px;
 }
 .eyebrow {
-    color:#8f64b3;
+    color: var(--color-purple-hover);
     font-size: 16px;
     font-weight: 800;
     letter-spacing: 4px;
@@ -143,36 +160,36 @@ background-attachment: fixed;
 
 }
 #intro h2 {
-    color:#ffffff;
+    color: var(--color-text);
     font-size: clamp(42px, 8vw, 76px);
     line-height: 1;
     margin-bottom: 16px;
 }
 #intro h3 {
-    color:#ffa600;
+    color: var(--color-gold);
     font-size: 28px;
     margin-bottom: 16px;
 }
 #intro p {
     font-size: 20px;
 }
-#intro .hero-description {
+.hero-description {
     max-width: 550px;
     margin: 0 auto 24px;
-    color: #dddddd;
+    color: var(--color-muted);
 }
 .hero-button {
     display:inline-block;
     padding:12px 24px;
-    background-color:#8f64b3;
-    color:#ffffff;
+    background-color: var(--color-purple);
+    color: var(--color-text);
     text-decoration:none;
     border-radius:12px;
     font-weight: 700;
 }
 .hero-button:hover {
     transform: translateY(-3px);
-    background-color: #a978d0;
+    background-color: var(--color-purple-hover);
 }
 #learning {
     margin-left: auto;
@@ -185,22 +202,22 @@ main{
     padding: 24px 16px;
 }
 section { 
-    background-color: #8f64b32c;
+    background-color: var(--color-panel);
     padding: 36px 40px;
     margin: 36px 0;
     border-radius: 18px;
-    border: 2px solid #8f64b3;
+    border: 2px solid var(--color-purple);
     min-height: 120px;
     scroll-margin-top: 110px;
 }
 section h2 {
-    color: #ffa600;
+    color: var(--color-gold);
     font-size: 28px;
     margin-bottom: 14px;
     font-weight: bolder;
 }
 section p{ 
-    color: #f1f0f0;
+    color: var(--color-text);
     font-size: 20px;
     margin-bottom: 12px;
     line-height: 1.7;
@@ -213,17 +230,17 @@ section p{
 }
 
 .learning li {
-    background-color: #8f64b32c;
-    color: #ffffff;
+    background-color: var(--color-panel);
+    color: var(--color-text);
     margin: 8px 0;
     padding: 12px 16px;
     border-radius: 8px;
-    border-left:solid #ffa600 4px;
+    border-left:solid var(--color-gold) 4px;
     font-size: 16px;
     font-weight: 700;
 }
 .learning h3{ 
-    color:#8f64b3;
+    color: var(--color-purple-hover);
     font-size: 18px;
     margin: 22px 0 10px;
 }
@@ -234,12 +251,12 @@ section p{
     margin-top: 15px;
     align-items: center;flex-wrap: wrap;
 }
-.social-links a { color: #ffffff;
+.social-links a { color: var(--color-text);
     text-decoration: none;
     transition: color 0.2s, transform 0.2s;
 }
 .social-links a:hover {
-    color: rgba(0, 0, 0, 0.603);
+    color: var(--color-purple-hover);
     transform: translateY(-2px);
 }
 .social-links svg{
@@ -250,17 +267,44 @@ footer {
     text-align: center;
     padding: 25px;
     margin-top: 30px;
-    color: #ffffff;
+    color: var(--color-text);
     font-size: 18px;
-    background-color: #8f64b32c;
+    background-color: var(--color-panel);
     width: 100%;
 }
 @media (max-width: 600px) {
-    .logo h1 { font-size: 28px;
+    .site-header{
+        padding: 18px 12px;
     }
-    .icon { 
-        width: 48px;
-        height:48px;
+    .logo {
+        gap: 10px;
+        padding-right: 48px;
     }
-    section { padding: 24px 20px;}
+.logo h1 {
+    font-size: clamp(22px,6vw,32px);
+    overflow-wrap: anywhere;
+}
+.icon {
+    width:54px;
+    height: 54px;
+}
+.menu-check,.menu-toggle {
+    top: 12px;
+    right: 12px;
+}
+.menu-panel{
+    top: 68px;
+    right: 12px;
+}
+main {
+    padding: 12px;
+}
+section {
+    padding: 24px 18px;
+    margin: 22px 0;
+}
+#intro p,
+section p {
+    font-size: 17px;
+}
 }
